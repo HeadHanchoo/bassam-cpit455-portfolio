@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1456 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Mobile Banking System Reliability and Dependability Diagram</title>
+  <desc id="desc">A monochrome diagram showing system profile, reliability flow, metric selection, and goal for a mobile banking system.</desc>
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#1f1f1f" stroke-width="1"/>
+    </pattern>
+    <filter id="soft">
+      <feGaussianBlur stdDeviation="1.2"/>
+    </filter>
+    <style>
+      .bg{fill:#030303}
+      .grid{fill:url(#grid);opacity:.45}
+      .panel{fill:#050505;stroke:#f2f2f2;stroke-width:3}
+      .thin{fill:none;stroke:#f2f2f2;stroke-width:3}
+      .dash{fill:none;stroke:#f2f2f2;stroke-width:3;stroke-dasharray:12 10}
+      .line{stroke:#f2f2f2;stroke-width:4;fill:none}
+      .muted-line{stroke:#f2f2f2;stroke-width:2;opacity:.35}
+      .title{fill:#f7f7f7;font-family:Arial, sans-serif;font-size:50px;font-weight:700}
+      .head{fill:#f7f7f7;font-family:Arial, sans-serif;font-size:26px;font-weight:700}
+      .label{fill:#f7f7f7;font-family:Arial, sans-serif;font-size:23px;font-weight:700}
+      .body{fill:#f0f0f0;font-family:Arial, sans-serif;font-size:23px}
+      .small{fill:#e8e8e8;font-family:Arial, sans-serif;font-size:19px}
+      .tiny{fill:#d8d8d8;font-family:Arial, sans-serif;font-size:18px}
+      .icon{fill:none;stroke:#fff;stroke-width:6;stroke-linecap:round;stroke-linejoin:round}
+      .white{fill:#fff}
+    </style>
+  </defs>
+
+  <rect class="bg" width="1456" height="1024"/>
+  <rect class="grid" width="1456" height="1024"/>
+  <text class="title" x="728" y="74" text-anchor="middle">Mobile Banking System: Reliability and Dependability Diagram</text>
+
+  <rect class="panel" x="24" y="120" width="260" height="804" rx="12"/>
+  <rect class="thin" x="24" y="120" width="260" height="78" rx="12"/>
+  <text class="head" x="116" y="169" text-anchor="middle">System Profile</text>
+  <path class="icon" d="M58 140h33v39H58zM66 132h17M69 151h11M69 164h11"/>
+  <circle class="icon" cx="103" cy="154" r="11"/>
+  <path class="icon" d="M85 182c3-19 33-19 36 0"/>
+
+  <text class="body" x="45" y="260">•</text><text class="label" x="64" y="260">Users:</text>
+  <text class="body" x="64" y="296">bank customers,</text>
+  <text class="body" x="64" y="332">bank staff,</text>
+  <text class="body" x="64" y="368">administrators</text>
+  <text class="body" x="45" y="458">•</text><text class="label" x="64" y="458">Usage:</text>
+  <text class="body" x="64" y="494">frequent daily use</text>
+  <text class="body" x="45" y="568">•</text><text class="label" x="64" y="568">Pattern:</text>
+  <text class="body" x="64" y="604">transaction-heavy</text>
+  <text class="body" x="64" y="640">and continuous</text>
+  <text class="body" x="45" y="716">•</text><text class="label" x="64" y="716">Main services:</text>
+  <text class="body" x="64" y="752">balance check,</text>
+  <text class="body" x="64" y="788">transfer,</text>
+  <text class="body" x="64" y="824">bill payment,</text>
+  <text class="body" x="64" y="860">notifications</text>
+
+  <rect class="panel" x="304" y="120" width="832" height="804" rx="12"/>
+  <rect class="dash" x="510" y="144" width="402" height="158" rx="12"/>
+  <text class="head" x="711" y="184" text-anchor="middle">Dependability Strategy:</text>
+  <text class="head" x="711" y="222" text-anchor="middle">Redundancy + Automatic Failover</text>
+  <text class="body" x="711" y="262" text-anchor="middle" font-style="italic">If the main server fails,</text>
+  <text class="body" x="711" y="296" text-anchor="middle" font-style="italic">the backup server continues service.</text>
+
+  <g transform="translate(320 360)">
+    <circle class="white" cx="31" cy="35" r="17"/>
+    <path class="white" d="M0 93c4-48 58-48 62 0z"/>
+    <text class="body" x="31" y="132" text-anchor="middle">User</text>
+  </g>
+  <path class="line" d="M382 444h45"/><path class="white" d="M427 444l-18-12v24z"/>
+
+  <g transform="translate(430 366)">
+    <rect class="icon" x="0" y="0" width="68" height="150" rx="7"/>
+    <path class="icon" d="M20 73h28M23 91h22M34 20v105"/>
+    <path class="icon" d="M18 70l16-16 16 16"/>
+    <text class="body" x="34" y="190" text-anchor="middle">Mobile</text>
+    <text class="body" x="34" y="226" text-anchor="middle">Banking App</text>
+  </g>
+  <path class="line" d="M502 444h45"/><path class="white" d="M547 444l-18-12v24z"/>
+
+  <g transform="translate(555 396)">
+    <path class="white" d="M72 0l72 42v84l-72 42-72-42V42z"/>
+    <circle class="bg" cx="72" cy="48" r="8"/>
+    <circle class="bg" cx="42" cy="105" r="8"/>
+    <circle class="bg" cx="102" cy="105" r="8"/>
+    <path class="icon" d="M72 56v40M48 101l20-18M96 101L76 83"/>
+    <text class="body" x="72" y="210" text-anchor="middle">Load</text>
+    <text class="body" x="72" y="246" text-anchor="middle">Balancer</text>
+  </g>
+  <path class="line" d="M700 444h44"/><path class="white" d="M744 444l-18-12v24z"/>
+
+  <rect class="dash" x="690" y="362" width="288" height="234" rx="12"/>
+  <g transform="translate(720 394)">
+    <rect class="icon" x="0" y="0" width="72" height="112" rx="6"/>
+    <path class="icon" d="M16 30h40M16 60h40M16 90h40"/>
+    <circle class="white" cx="17" cy="30" r="4"/>
+    <circle class="white" cx="17" cy="60" r="4"/>
+    <circle class="white" cx="17" cy="90" r="4"/>
+    <circle class="icon" cx="72" cy="112" r="23"/>
+    <path class="icon" d="M49 112h46M72 89c-13 14-13 32 0 46M72 89c13 14 13 32 0 46"/>
+    <text class="body" x="42" y="150" text-anchor="middle">Main App</text>
+    <text class="body" x="42" y="184" text-anchor="middle">Server</text>
+  </g>
+  <path class="line" stroke-dasharray="10 8" d="M815 450h88"/>
+  <g transform="translate(880 394)">
+    <rect class="icon" x="0" y="0" width="72" height="112" rx="6"/>
+    <path class="icon" d="M16 30h40M16 60h40M16 90h40"/>
+    <circle class="white" cx="17" cy="30" r="4"/>
+    <circle class="white" cx="17" cy="60" r="4"/>
+    <circle class="white" cx="17" cy="90" r="4"/>
+    <circle class="icon" cx="72" cy="112" r="23"/>
+    <path class="icon" d="M49 112h46M72 89c-13 14-13 32 0 46M72 89c13 14 13 32 0 46"/>
+    <text class="body" x="42" y="150" text-anchor="middle">Backup App</text>
+    <text class="body" x="42" y="184" text-anchor="middle">Server</text>
+  </g>
+  <path class="line" d="M978 444h50"/><path class="white" d="M1028 444l-18-12v24z"/>
+  <g transform="translate(1040 400)">
+    <ellipse class="icon" cx="44" cy="16" rx="42" ry="16"/>
+    <path class="icon" d="M2 16v82c0 9 19 16 42 16s42-7 42-16V16M2 57c0 9 19 16 42 16s42-7 42-16"/>
+    <text class="body" x="44" y="154" text-anchor="middle">Database</text>
+  </g>
+
+  <path class="dash" d="M390 650h620M585 650v54M789 650v54M1004 650v54"/>
+  <g class="small">
+    <rect class="dash" x="320" y="704" width="150" height="176" rx="10"/>
+    <text x="395" y="832" text-anchor="middle">Authentication</text><text x="395" y="862" text-anchor="middle">Service</text>
+    <rect class="dash" x="505" y="704" width="164" height="176" rx="10"/>
+    <text x="587" y="832" text-anchor="middle">Payment</text><text x="587" y="862" text-anchor="middle">Gateway</text>
+    <rect class="dash" x="710" y="704" width="158" height="176" rx="10"/>
+    <text x="789" y="832" text-anchor="middle">Notification</text><text x="789" y="862" text-anchor="middle">Service</text>
+    <rect class="dash" x="920" y="704" width="168" height="176" rx="10"/>
+    <text x="1004" y="812" text-anchor="middle">External Banks /</text><text x="1004" y="842" text-anchor="middle">Payment Networks</text>
+  </g>
+
+  <rect class="panel" x="1156" y="120" width="276" height="804" rx="12"/>
+  <rect class="thin" x="1156" y="120" width="276" height="78" rx="12"/>
+  <text class="head" x="1278" y="169" text-anchor="middle">Metric Selection</text>
+  <rect class="thin" x="1176" y="222" width="230" height="144" rx="8"/>
+  <text class="label" x="1260" y="264">POFOD:</text><text class="body" x="1260" y="296">for on-demand</text><text class="body" x="1260" y="330">safety-critical</text><text class="body" x="1260" y="364">systems</text>
+  <path class="icon" d="M1215 250l36 14v34c0 25-15 44-36 55-21-11-36-30-36-55v-34z"/>
+  <rect class="thin" x="1176" y="380" width="230" height="156" rx="8"/>
+  <text class="label" x="1260" y="424">ROCOF:</text><text class="body" x="1260" y="456">rate of</text><text class="body" x="1260" y="490">occurrence of</text><text class="body" x="1260" y="524">failures</text>
+  <path class="icon" d="M1198 394l-34 68h68zM1198 418v22M1198 462v2"/>
+  <circle class="panel" cx="1416" cy="502" r="32"/><path class="icon" d="M1397 503l14 15 28-36"/>
+  <rect class="thin" x="1176" y="550" width="230" height="120" rx="8"/>
+  <text class="label" x="1260" y="596">AVAIL:</text><text class="body" x="1260" y="628">percentage</text><text class="body" x="1260" y="660">of uptime</text>
+  <circle class="icon" cx="1210" cy="608" r="28"/><path class="icon" d="M1210 588v25l18 10"/>
+  <path class="dash" d="M1168 694h252"/>
+  <text class="label" x="1178" y="738">Chosen metric: ROCOF,</text>
+  <text class="body" x="1178" y="776">because mobile banking is</text>
+  <text class="body" x="1178" y="812">a high-transaction system</text>
+  <text class="body" x="1178" y="848">and the main concern is</text>
+  <text class="body" x="1178" y="884">how often failures occur</text>
+  <text class="body" x="1178" y="920">during continuous use.</text>
+
+  <rect class="panel" x="140" y="952" width="1180" height="84" rx="10"/>
+  <path class="icon" d="M220 983a42 42 0 1 0 42 42M220 983v42h42M252 987l26-26M278 961v30h30"/>
+  <text class="head" x="304" y="1008">Goal:</text>
+  <text class="body" x="414" y="1008">reduce transaction failures, keep service available, and maintain user trust.</text>
+</svg>
